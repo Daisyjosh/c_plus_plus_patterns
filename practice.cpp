@@ -610,6 +610,58 @@ void pattern26(int n)
   }
   cout  << "\n" << endl;
 }
+
+void pattern27(int n)//important
+{
+  int ch = 64 + n*(n+1)/2;
+  for(int i = 1; i <= n;  i++)
+  {
+    for(int j = 1; j <= i; j++)
+    {
+      cout << char(ch);
+      ch--;
+    }
+    cout << endl;
+  }
+  cout  << "\n" << endl;
+
+}
+
+void pattern28(int n)
+{
+  for(int i = 1; i<= n; i++)
+  {
+    for(int j =1; j <= n-i; j++)
+    {
+      cout << " ";
+    }
+    for(int k = 1; k <= (2*i-1); k++)
+    {
+      cout << char(64 +(2* i-1));
+    }
+    cout << endl;
+  }
+  cout  << "\n" << endl;
+
+}
+
+void pattern29(int n)
+{
+  for(int i = 1; i <= n; i++)//top_half
+  {
+    //space
+    for(int j = 1; j <= n-i; j++)
+    {
+      cout << " ";
+    }
+    //stars
+    for(int k = 1; k<= i; k++)
+    {
+      cout << "*";
+    }
+    cout << endl;
+  }
+}
 int main() {
   
   int n;
@@ -641,6 +693,9 @@ int main() {
   pattern24(n);
   pattern25(n);
   pattern26(n);
+  pattern27(n);
+  pattern28(n);
+  pattern29(n);
 
   return 0;
 }
